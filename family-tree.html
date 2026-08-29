@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Tree — Code Roots</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="tree-page loading">
+    <header class="tree-header">
+      <a href="index.html" class="brand">CODE ROOTS</a>
+      <div class="header-copy"><strong id="language-count">PROGRAMMING LANGUAGES</strong><span>Click: ancestors · Ctrl + click: all links · Shift / double-click: Wikipedia</span></div>
+      <label class="search-box"><span class="sr-only">Search language</span><input id="search" type="search" placeholder="Search language…" autocomplete="off" /></label>
+      <button id="reset" type="button">RESET VIEW</button>
+    </header>
+    <main id="tree-wrap">
+      <svg id="tree" role="img" aria-label="Etkileşimli programlama dilleri soy ağacı"></svg>
+      <div class="controls" aria-label="Zoom controls">
+        <button id="zoom-in" aria-label="Zoom in">+</button>
+        <button id="zoom-out" aria-label="Zoom out">−</button>
+      </div>
+      <aside class="legend"><span><i class="dot foundational"></i>Foundational</span><span><i class="dot procedural"></i>Procedural</span><span><i class="dot functional"></i>Functional</span><span><i class="dot object"></i>Object-oriented</span><span><i class="dot web"></i>Web</span><span><i class="dot scripting"></i>Scripting</span><span><i class="dot markup"></i>Markup</span><span><i class="solid"></i>Solid: direct lineage</span><span><i class="foundation-line"></i>Red dashed: foundational predecessor</span><span><i class="dash"></i>Dashed: family affiliation</span><span><i class="impl-dot"></i>Blue: implementation / platform</span><span><i class="influence-dot"></i>Pink: design influence</span></aside>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="tree.js"></script>
+  </body>
+</html>
